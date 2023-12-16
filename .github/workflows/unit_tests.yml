@@ -3,9 +3,10 @@ name: Unit Tests
 
 # Define when this workflow should be triggered.
 on:
-  # Trigger the workflow on pull requests targeting the "main" branch.
+  # Trigger the workflow on pull requests when a Python file is modified.
   pull_request:
-    branches: [ "main" ]
+    paths:
+      - '**.py'
 
   # Allow manual triggering of the workflow from the GitHub Actions UI.
   workflow_dispatch:
