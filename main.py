@@ -76,7 +76,7 @@ class PepLinter:
 
         # Regex pattern for instructions that do not require an operand
         no_operand_instructions_pattern = re.compile(
-            r"^(ASL(A|X)|ASR(A|X)|RET|STOP|NOP0)$", re.IGNORECASE
+            r"^(ASL(A|X)|ASR(A|X)|STOP|(RET|NOP)0?)$", re.IGNORECASE
         )
 
         # Check for valid directives using regex
